@@ -7,8 +7,68 @@
       <a-assets>
         <img id="texture" src="pacman_maze.jpg" />
       </a-assets>
+      <!-- Pac-Man -->
+      <a-entity class="pacman" position="6 1.5 -3">
+        <a-sphere rotation="90 180 0"phi-start="210" phi-length="270" side="double"radius="1" color="yellow"></a-sphere>
+      </a-entity>
+
+      <!-- Move ghosts -->
+      <a-entity class="ghosts" position="-3 0 0">
+        <!-- Cyan Ghost -->
+        <a-entity class="ghost" position="-2.5 1 -3">
+          <a-sphere position="0 0.5 0" radius="0.5" color="cyan"></a-sphere>        
+          <a-cylinder position="0 0.2 0" radius="0.5" height="0.6" color="cyan"></a-cylinder>
+          <!-- Eyes -->
+          <a-sphere position="-0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="-0.14 0.55 0.49" radius="0.08" color="blue"></a-sphere>
+          <a-sphere position="0.22 0.55a 0.49" radius="0.08" color="blue"></a-sphere>
+        </a-entity>
+
+        <!-- Pink Ghost -->
+        <a-entity class="ghost" position="-1 1 -3">
+          <a-sphere position="0 0.5 0" radius="0.5" color="pink"></a-sphere>        
+          <a-cylinder position="0 0.2 0" radius="0.5" height="0.6" color="pink"></a-cylinder>
+          <!-- Eyes -->
+          <a-sphere position="-0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="-0.14 0.55 0.49" radius="0.08" color="blue"></a-sphere>
+          <a-sphere position="0.22 0.55a 0.49" radius="0.08" color="blue"></a-sphere>
+        </a-entity>
+
+        <!-- Orange Ghost -->
+        <a-entity class="ghost" position="0.5 1 -3">
+          <a-sphere position="0 0.5 0" radius="0.5" color="orange"></a-sphere>        
+          <a-cylinder position="0 0.2 0" radius="0.5" height="0.6" color="orange"></a-cylinder>
+          <!-- Eyes -->
+          <a-sphere position="-0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="-0.14 0.55 0.49" radius="0.08" color="blue"></a-sphere>
+          <a-sphere position="0.22 0.55a 0.49" radius="0.08" color="blue"></a-sphere>
+        </a-entity>
+
+        <!-- Red Ghost -->
+        <a-entity class="ghost" position="2 1 -3">
+          <a-sphere position="0 0.5 0" radius="0.5" color="red"></a-sphere>        
+          <a-cylinder position="0 0.2 0" radius="0.5" height="0.6" color="red"></a-cylinder>
+          <!-- Eyes -->
+          <a-sphere position="-0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="0.17 0.55 0.4" radius="0.14" color="white"></a-sphere>
+          <a-sphere position="-0.14 0.55 0.49" radius="0.08" color="blue"></a-sphere>
+          <a-sphere position="0.22 0.55a 0.49" radius="0.08" color="blue"></a-sphere>
+        </a-entity>
+      </a-entity>
+
+      <!-- Dots -->
+      <a-sphere position="0.25 1.5 -3" radius="0.2"></a-sphere>
+      <a-sphere position="1.25 1.5 -3" radius="0.2"></a-sphere>
+      <a-sphere position="2.25 1.5 -3" radius="0.2"></a-sphere>
+      <a-sphere position="3.25 1.5 -3" radius="0.2"></a-sphere>
+      <a-sphere position="4.25 1.5 -3" radius="0.2"></a-sphere>
+
       <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" repeat="5 5" src="#texture"></a-plane>
       <a-sky color="black"></a-sky>
+      <a-camera position="0.5 1.5 5"></a-camera>
     </a-scene>
   </body>
 </html>
