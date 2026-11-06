@@ -4,9 +4,7 @@ class Rocket{
     this.y = y;
     this.z = z;
     this.dy = speed;
-    // <a-cone radius-top="0" radius-bottom="0.5" height="1" color="red" position="0 0 -2"></a-cone>
-    //   <a-cylinder radius="0.5" height="2" color="gray" position="0 -1.5 -2"></a-cylinder>
-    //   <a-cone radius-top="0" radius-bottom="0.25" height="2" color="orange" position="0 -3.5 -2" rotation="-180 0 0"></a-cone>
+    
     this.obj = document.createElement("a-entity");
 
         let top = document.createElement("a-cone");
