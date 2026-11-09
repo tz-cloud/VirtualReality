@@ -20,12 +20,12 @@ class Ufo{
         bubble.setAttribute("opacity", 0.85);
         this.obj.append(bubble);
 
-    this.obj.setAttribute("position",{x:x,y:y,z:z});
+    this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
     scene.append( this.obj );
   }
 
   invade(){
-    this.y -= this,dy;
+    this.y -= this.dy;
     this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
   }
 }
