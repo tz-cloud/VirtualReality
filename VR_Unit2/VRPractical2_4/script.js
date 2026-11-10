@@ -24,8 +24,9 @@ function loop(){
   }
 
   for(let ufo of ufos){
-    if (ufo.y > 1) {
+    if (ufo.y > 6) {
       ufo.invade();
+      
     }
   }
 

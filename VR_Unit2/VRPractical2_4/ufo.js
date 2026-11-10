@@ -20,6 +20,15 @@ class Ufo{
         bubble.setAttribute("opacity", 0.85);
         this.obj.append(bubble);
 
+        let light = document.createElement("a-cone");
+        light.setAttribute("radius-top",1);
+        light.setAttribute("radius-bottom",4);
+        light.setAttribute("opacity",0.5);
+        light.setAttribute("height",8)
+        light.setAttribute("color","#5eee90");
+        light.setAttribute("position","0 -5 0");
+        this.obj.append(light);
+
     this.obj.setAttribute("position",{x:this.x,y:this.y,z:this.z});
     scene.append( this.obj );
   }
