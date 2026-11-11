@@ -15,12 +15,26 @@ class Rocket{
         top.setAttribute("position", {x:0, y: 0, z:-2});
         this.obj.append(top);
 
+        let top_body = document.createElement("a-cylinder");
+        top_body.setAttribute("radius", 0.51);
+        top_body.setAttribute("height", 0.5);
+        top_body.setAttribute("color", "#db4c42");
+        top_body.setAttribute("position", {x:0, y:-0.6, z:-2});
+        this.obj.append(top_body);
+
         let body = document.createElement("a-cylinder");
         body.setAttribute("radius", 0.5);
         body.setAttribute("height", 2);
         body.setAttribute("color", "gray");
         body.setAttribute("position", {x:0, y:-1.5, z:-2});
         this.obj.append(body);
+
+        let body_bottom = document.createElement("a-cylinder");
+        body_bottom.setAttribute("radius", 0.51);
+        body_bottom.setAttribute("height", 0.5);
+        body_bottom.setAttribute("color", "#db4c42");
+        body_bottom.setAttribute("position", {x:0, y:-2.6, z:-2});
+        this.obj.append(body_bottom);
 
         let bottom = document.createElement("a-cone");
         bottom.setAttribute("radius-top", 0);
