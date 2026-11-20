@@ -10,19 +10,21 @@
    you chose to put in the maze.  Get Creative!
 */
 
+
+
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "wwwwwwww-wwwwwwwwwwwww",
+  "w---w----------------w",
+  "w-w----w-=-----------w",
+  "w-wwww-w-------------w",
+  "w------w-------------w",
+  "w-www----------------w",
+  "w-w-w--w-------------w",
+  "w--------------------w",
+  "w--------------------w",
+  "w--------------------w",
+  "w---------------------",
+  "wwwwwwwwwwwwwwwwwwwwww",
 ];
 
 /* Challenge 2
@@ -33,7 +35,23 @@ let scene;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
+
+  let wall = new Wall(0, 1, 0);
+
   for(let r = 0; r < maze.length; r++){
+    let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "w"){
+        new Wall(c,1,r);
+      }
+      // else if(cols[c] == "t"){
+      //   new Tree(c,1,r);
+      // }else if(cols[c]=="o"){
+      //   new Rock(c,1,r);
+      // }
+    }
+  }
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
     */ 
@@ -41,6 +59,5 @@ window.addEventListener("DOMContentLoaded",function() {
        Make an appropriate decision based on the characters you chose to enter 
        in the maze.  Create an instance of the corresponding object.
     */
-  }
 
 })
